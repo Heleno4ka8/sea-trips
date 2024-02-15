@@ -1,0 +1,131 @@
+include components/zminni
+include components/mixins
+
+doctype html
+html(lang="uk")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0")
+        link(rel="stylesheet", href="css/styles.css")
+        link(rel="preconnect", href="https://fonts.googleapis.com")
+        link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&family=PT+Sans&family=Rubik:ital@0;1&display=swap", rel="stylesheet")
+        title Морські пригоди, план подорожі та варіанти турів
+    body
+        header
+            .container.wrapper
+                .d-flex.justify-content-between.align-items-center
+                    .logo.d-flex.align-items-center
+                        img(src="img/logo.png", alt="logotype")
+                        p trips 
+                    nav.nav
+                        +list(menu)
+                .center.text-center
+                    .rama.mx-auto        
+                    h1 Морські пригоди 
+                    p.mx-auto Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
+                    .button.ramka.mx-auto     
+                        a.d-inline-block(href="#") Детальніше
+                .text.text-center 
+                    p.mx-auto обери свій план подорожі
+                    i Наша фірма -лідер на ринку у своїй сфері
+                    br
+                    a(href="#tours") 
+                        img(src="img/arrow.png", alt="arrow")
+        main 
+            div.middle#tours
+                .container 
+                    .row.cards-top.flex-container 
+                        .column.col-lg-3.col-md-6.col-12.card1.mx-auto
+                            h2 про нашу компанію
+                            p.about Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
+                            .button     
+                                a.d-inline-block(href="#") Детальніше
+                            p.mitka * - зверніть увагу, зміна ціни може залежати від курсу долара.
+                        .column.col-12.col-md-6.col-lg-3#services 
+                            +cards(figuresTop.Velotour)
+                        .column.col-lg-3.col-md-6.col-12 
+                            +cards(figuresTop.Islandtour)
+                        .column.col-lg-3.col-md-6.col-12 
+                            +cards(figuresTop.Order)
+                    div.plans        
+                        a(href="#") дивитись усі плани
+            .container
+                hr
+            div.island     
+                .container 
+                    .row.flex-container               
+                        .col-lg-4.column.col-12
+                            picture 
+                                img(src="img/Island.jpg", alt="wildisland")
+                                source(src="img/Island.webp", type="image/webp")
+                        .col-lg-8.column.col-12
+                            h2 Дивовижний безлюдний острів, який зводить людей з розуму
+                            .row.flex-container
+                                .col-lg-8.col-12.tailand 
+                                    p Пхукет - курортно-туристична Мекка Таїланду. 
+                                    p Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
+                                    .button.mx-auto.buttons.text-center.text-lg-start     
+                                        a.d-inline-block(href="#") замовити тур
+                                        a.d-inline-block(href="#") детальніше
+                                .col-lg-4.col-12
+                                    .price
+                                        p.cost 575 грн./день
+                                        p В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії. 
+            div.surfing 
+                .container 
+                    .row.flex-container 
+                        .col-lg-6.col-12.column.text-center.text-lg-start
+                            h2 СПІЙМАЙ ХВИЛЮ
+                            h2.text-blue ЖИВИ ЯСКРАВО!
+                            p.extreme Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сeрфером!
+                            .button.mx-auto     
+                                a.d-inline-block(href="#") детальніше
+                        .col-lg-6.col-12.column.review#review 
+                            picture 
+                                img(src="img/koma.png" alt="apostrophe")
+                            p.excurcovod.mx-auto Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи. 
+                            p 
+                                strong Олег Набережний
+                            p.client клієнт
+                            picture 
+                                img(src="img/man.png" alt="client")               
+            div.hotsale
+                .container
+                    h2 Спеціальні пропозиції тижня
+                    p.hot Гарячі пропозиції, швидше обирай і поїхали!
+                    .row.cards-middle.flex-container
+                        .column.col-lg-3.col-md-6.col-12
+                            +cardsMiddle(figuresMiddle.romantictour)
+                        .column.col-lg-3.col-md-6.col-12 
+                            +cardsMiddle(figuresMiddle.bycicletour)
+                        .column.col-lg-3.col-md-6.col-12 
+                            +cardsMiddle(figuresMiddle.island)
+                        .column.col-lg-3.col-md-6.col-12
+                            +cardsMiddle(figuresMiddle.surfing)
+            .container            
+                hr
+            div.else     
+                .container 
+                    .row.justify-content-center.flex-container 
+                        .column.col-lg-3.col-md-12.text-center.text-lg-start
+                            h2 додаткова інформація
+                        .column.col-lg-3.col-md-6.col-12.hotels
+                            +cardsInfo(figureInfo.hotels)
+                        .column.col-lg-3.col-md-6.col-12.feed
+                            +cardsInfo(figureInfo.feed)
+                        .column.col-lg-3.col-md-6.col-12.ask
+                            h4 задати питання
+                            p.consulting Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання 
+                            a.call(href="tel:+380505698511") +38 (050) 56 98 511
+                            p.name Анна Миколаївна
+                            p.consultant консультант
+                            picture
+                                img(src="img/woman.png" alt="woman photo")
+        footer
+            div.footer
+            div.container-fluid.bg
+                p.copyright.container &copy; 2016 Cars.com All rights reserved.
+
+
+        script(src="js/scripts.js")

@@ -1,0 +1,653 @@
+@import "components/bootstrap.min"
+
+=media ($size)    
+    @media screen and (min-width: #{$size}px)
+        @content
+
+* 
+    margin: 0
+    font-size: 16rem
+
+html
+    font-size: 0.7px
+    +media(768)
+        font-size: 0.8px
+    +media(1280)
+        font-size: 0.9px 
+    +media(1600)
+        font-size: 1px 
+    scroll-behavior: smooth 
+.wrapper
+    padding: 0 30rem
+header 
+    background-image: url(../img/bg-sea.jpg)
+    background-position: center
+    background-size: cover
+    padding: 30rem 0 45rem         
+
+.logo 
+    p
+        font-size: 36rem
+        color: #ffffff
+        font-weight: 500
+        font-family: "Exo 2"
+        text-align: center
+        margin-left: 8px
+.burger
+    display: inline-block
+    height: 25px
+    +media(1000) 
+        display: none
+    span
+        position: relative
+        display: inline-block
+        width: 40px
+        height: 3px
+        background-color: #fff 
+        &::before
+            content: ""
+            position: absolute
+            background-color: #fff
+            width: 40px
+            height: 3px
+            top: -8px
+            left: 0
+        &::after
+            content: ""
+            position: absolute
+            background-color: #fff
+            width: 40px
+            height: 3px
+            top: 8px
+            left: 0
+
+.nav
+    position: relative    
+    ul.adaptive_menu
+        background-color: rgba(255,255,255,0.25)
+        padding: 10px
+        border-radius: 9px
+        display: block
+        position: absolute
+        top: 40rem
+        text-align: center
+        right: -20rem
+
+.menu
+    display: none
+    +media(1000) 
+        display: flex
+    list-style: none
+    column-gap: 30px
+    a
+        font-size: 14rem
+        letter-spacing: 1px
+        text-transform: uppercase
+        text-decoration: none
+        color: #fff
+        font-weight: 400
+        font-family: "Rubik"
+        text-align: right
+        transition: 0.4s
+        &:hover
+            color: #ffb700
+
+.center
+    margin-top: 135px
+    .rama
+        width: 300rem
+        +media(350)
+            width: 370rem
+        height: 40px 
+        border: 4px solid rgba(255, 255, 255, 0.2)
+        border-bottom: none
+
+    h1
+        font-size: 72rem
+        letter-spacing: 1px
+        text-transform: uppercase
+        color: #ffffff
+        font-weight: 400
+        font-family: "Rubik"
+    p
+        max-width: 528px
+        font-size: 16rem
+        line-height: 24px
+        color: #ffffff
+        font-weight: 400
+        font-style: italic
+        font-family: "Rubik"     
+
+.button
+    margin-top: 20px
+    a
+        padding: 9px 15px
+        border-radius: 23px
+        font-size: 16rem
+        letter-spacing: 1px
+        text-transform: uppercase
+        font-weight: 400
+        font-family: "Rubik"
+        text-align: center
+        text-decoration: none
+        min-width: 170px
+        color: #fdfcfb
+        background-color: #ffb700
+        border: 2px solid #ffb700 
+        box-shadow: 0px 4px 10.5px rgba(193,139,1,0.24)
+        &:hover
+            background-color: #fff
+            color: #0099ff
+            border: 2px solid #0099ff
+
+.ramka
+    width: 300rem
+    +media(350)
+        width: 370rem
+    height: 90px 
+    border: 4px solid rgba(255, 255, 255, 0.2)
+    border-top: none 
+
+.text 
+    p
+        font-size: 36rem
+        letter-spacing: 1px
+        line-height: 44px
+        text-transform: uppercase
+        color: #333333
+        font-weight: 400
+        font-family: "Rubik"
+        text-align: center  
+        max-width: 320px 
+        margin-top: 250px
+    i
+        
+        font-size: 16rem
+        line-height: 24px
+        color: #333333
+        font-weight: 400
+        font-family: "Rubik"
+
+    a 
+        margin-top: 35px
+        display: inline-block
+        transition: 0.3s
+        &:hover
+            transform: scale(1.2)
+main
+    background-color: #f5f8fa
+.middle
+    padding: 45rem 0 70rem
+
+.flex-container
+    row-gap: 25px
+
+.cards-top    
+    h2 
+        font-size: 36rem
+        letter-spacing: 1px
+        line-height: 40px
+        text-transform: uppercase
+        color: #333333
+        font-weight: 400
+        font-family: "Rubik"
+    p.about
+        font-size: 16rem
+        line-height: 22px
+        color: #555555
+        font-weight: 400
+        font-style: italic
+        font-family: "Rubik"
+        margin: 20px 0 45px
+    .mitka
+        font-size: 13rem
+        line-height: 19px
+        color: #bbbbbb
+        font-style: normal 
+        margin-top: 19px
+.column
+    padding: 0 15px 
+.card1 
+    max-width: 360px
+    text-align: center
+    +media(768) 
+        padding-right: 40px 
+        text-align: left
+.ticket
+    text-align: center
+    padding: 25px 20px
+    max-width: 360px
+    &:hover
+        background-color: #fff
+        box-shadow: 0px 4px 10.5px rgba(3,20,31,0.05)   
+    .tour
+        margin: 20px 0 10px
+        font-size: 18rem
+        color: #333333
+        font-weight: 400
+        font-family: "Rubik"
+        font-style: normal
+    h3
+        font-size: 24rem
+        color: #0099ff
+        font-weight: 400
+        font-family: "Rubik"
+        text-align: center 
+        margin: 10px 0
+    p.desk
+        font-size: 13rem
+        min-height: 76px
+        line-height: 19px
+        color: #999999
+        font-weight: 400
+        font-family: "Rubik" 
+        text-align: center
+        +media(768)
+            text-align: left
+.promo
+    position: relative
+    &::before
+        content: ""
+        position: absolute
+        background-image: url(../img/promo.png) 
+        top: 0
+        left: 0
+        z-index: 2
+        width: 60px
+        height: 60px
+.plans 
+    text-align: center
+    padding-top: 25px
+    a 
+        position: relative
+        font-size: 12rem
+        letter-spacing: 0px
+        text-transform: uppercase
+        color: #0099ff
+        font-weight: 400
+        font-family: "Rubik"
+        text-decoration: none
+        transition: 0.3s   
+        &::after
+            content: ""
+            position: absolute
+            top: 1.3rem
+            right: -15rem
+            width: 11rem
+            height: 11rem
+            border-radius: 50%
+            background-color: rgba(255,183,0,0)
+            border: 1px solid #0099ff        
+        &::before
+            content: ""
+            position: absolute
+            border-right: 1px solid #0099ff 
+            border-bottom: 1px solid #0099ff 
+            width: 4rem
+            height: 4rem
+            right: -10.52rem
+            bottom: 5rem
+            transform: rotate(-45deg)
+        &:hover
+            text-decoration: underline
+hr
+    height: 2px
+    background-color: #dfe3e6
+    margin: 0 15rem
+
+.island
+    padding: 75rem 0 80rem
+    img
+        width: 100%
+    h2
+        font-size: 36rem
+        text-transform: uppercase
+        color: #333333
+        font-weight: 400
+        font-family: "Rubik"          
+        margin: 0 0 25px 
+.tailand
+    +media(992)
+        padding-right: 20px
+    p
+        font-size: 16rem
+        line-height: 24px
+        color: #333333
+        font-weight: 400
+        font-style: italic
+        font-family: "Rubik"
+    .buttons
+        margin-top: 15px
+        +media(1200)
+            margin-top: 35px
+        a
+            min-width: 180px
+            &:last-child
+                margin-top: 15px
+                +media(400)
+                    margin-left: 10px
+                    margin-top: 0
+
+.price
+    padding: 20px 25px 17px
+    +media(1400)
+        padding: 40rem 50rem 35rem
+    background-color: #edf2f5
+    .cost
+        font-size: 24rem
+        color: #0099ff
+        font-weight: 400
+        font-family: "Rubik"
+        text-align: center
+        margin-bottom: 15px
+    p
+        font-size: 13rem
+        line-height: 20px
+        color: #999999
+        font-weight: 400
+        font-family: "Rubik"
+        text-align: center    
+.surfing
+    padding: 90rem 0
+    font-family: "Rubik"  
+    color: #ffffff
+    background-image: url(../img/bg-center.jpg)
+    background-position: right
+    background-size: cover
+    h2
+        font-size: 56rem
+        letter-spacing: 2px
+        text-transform: uppercase
+    .text-blue
+        color: #0099ff
+    .extreme
+        font-size: 16rem
+        line-height: 24px
+        font-family: "PT Sans"
+        width: 100%
+        +media(992)
+            max-width: 450px
+        margin: 20px 0 33px
+    .review
+        padding: 0 30rem 
+        position: relative
+        &:before
+            content: ""
+            position: absolute
+            opacity: 0.102
+            top: 17px
+            width: 30vw
+            +media(560)
+                width: 200rem
+            height: 243px
+            border: 4px solid #ffffff
+            border-right: none
+        &:after
+            content: ""
+            position: absolute
+            opacity: 0.102
+            top: 17px
+            right: 20px
+            width: 30vw
+            +media(560)
+                width: 200rem
+            height: 243px
+            border: 4px solid #ffffff
+            border-left: none
+    .excurcovod
+        font-size: 16rem
+        line-height: 25px
+        font-style: italic
+        width: 90% 
+        +media(576)
+            max-width: 495px 
+        margin: 10px 0     
+    strong
+        display: block
+        font-size: 18rem
+        text-align: center              
+    .client
+        font-size: 14rem
+        color: #999999
+        text-align: center
+        margin-bottom: 10px
+    picture
+        display: block
+        text-align: center
+
+.hotsale
+    padding: 70rem 0
+    font-family: "Rubik"
+    color: #333333
+    h2  
+        font-size: 36rem
+        text-transform: uppercase
+        text-align: center 
+    .hot
+        margin: 5px 0 30px 0
+        font-size: 16rem
+        font-style: italic
+        text-align: center 
+    .special
+        &:hover
+            background-color: #fff
+            box-shadow: 0px 4px 10.5px rgba(3,20,31,0.05)       
+    p.cruise 
+        font-size: 18rem
+    .desc
+        margin: 10px 0
+        font-size: 13rem
+        line-height: 19px
+        min-height: 20px
+        +media(768)
+            min-height: 40px
+        +media(990)
+            min-height: 76px
+        +media(1200)
+            min-height: 40px
+        color: #999999  
+    h3
+        font-size: 24rem
+        color: #0099ff 
+    a
+        font-size: 13rem
+        margin-right: 15px 
+        letter-spacing: 1px
+        text-transform: uppercase
+        color: #ffb700
+        text-decoration: none 
+        position: relative
+        transition: 0.3s
+        &::after
+            content: ""
+            position: absolute
+            top: 4rem
+            right: -14.3rem
+            width: 11rem
+            height: 11rem
+            border-radius: 50%
+            background-color: rgba(255,183,0,0)
+            border: 1px solid #ffb700        
+        &::before
+            content: ""
+            position: absolute
+            border-right: 1px solid #ffb700
+            border-bottom: 1px solid #ffb700 
+            width: 4rem
+            height: 4rem
+            right: -10.7rem
+            bottom: 8rem
+            transform: rotate(-45deg) 
+        &:hover
+            text-decoration: underline                 
+.special
+    img
+        width: 100% 
+    figcaption
+        padding: 20rem          
+.bycicle
+    picture
+        position: relative
+        display: block
+        &::after
+            content: ""
+            position: absolute
+            background: #0099ff url(../img/bicycle.png) no-repeat center/contain
+            top: 0
+            left: 0
+            width: 60px
+            height: 100%      
+.else
+    padding: 85rem 0
+    font-weight: 400
+    font-family: "Rubik"
+    .flex
+        display: flex
+        justify-content: start
+        p
+            margin: 10px 0
+    h2
+        font-size: 36rem
+        letter-spacing: 1px
+        line-height: 40rem
+        text-transform: uppercase
+        color: #333333
+    .hotels 
+        max-width: 270px 
+        figure
+            padding: 25px 20px    
+            background-image: url(../img/house.jpg)
+            background-repeat: no-repeat
+            background-size: cover
+    .info
+        picture
+            margin: 0 20px 10px 0
+        h4
+            font-size: 18rem
+            color: #ffffff
+            min-height: 38px 
+            display: flex
+            align-items: center
+        .size
+            font-size: 13rem
+            line-height: 19rem
+            color: #bbbbbb  
+        .description
+            font-size: 13rem
+            line-height: 19rem
+            color: #fefefe
+            min-height: 76px
+            +media(1280)
+                min-height: 86px
+            +media(1440)
+                min-height: 110px
+            +media(1920)
+                min-height: 100px
+        .knopka
+            padding: 5px 15px 
+            display: inline-block 
+            border: 2px solid #ffb700
+            border-radius: 23px 
+            margin-top: 25px
+            text-transform: uppercase
+            color: #ffb700 
+            text-decoration: none
+            transition: 0.2s
+            &:hover
+                color: #fff
+                background-color: #ffb700
+                img
+                    filter: brightness(2)  
+            span    
+                font-size: 12rem
+                margin-left: 10px
+    .feed
+        max-width: 270px
+        figure
+            background-image: url(../img/paluba.jpg)
+            background-repeat: no-repeat 
+            background-repeat: no-repeat
+            background-size: cover
+            padding: 25px 20px       
+    .ask
+        position: relative
+        text-align: center
+        max-width: 270px
+        &:before
+            content: ""
+            position: absolute
+            top: 2px
+            left: 15px
+            width: 47rem   
+            +media(992)
+                width: 3.5vw
+            height: 255px
+            border: 4px solid #ffb700
+            border-right: none
+        &:after
+            content: ""
+            position: absolute
+            top: 2px
+            right: 15px
+            width: 47rem
+            +media(992)
+                width: 3.5vw
+            height: 255px
+            border: 4px solid #ffb700
+            border-left: none
+        h4
+            font-size: 18rem
+            margin-top: -3px
+            letter-spacing: 1px
+            color: #333333
+            margin-bottom: 20px 
+            line-height: 1em
+        .consulting
+            margin: auto
+            font-size: 13rem
+            line-height: 16px
+            color: #999999 
+            max-width: 150px
+            margin-bottom: 20px
+        .call
+            font-size: 18rem
+            color: #0099ff
+            text-decoration: none
+            position: relative
+            transition: 0.3s
+            &:before
+                content: ""
+                background-image: url(../img/phone.png)
+                position: absolute
+                width: 16px
+                height: 17px
+                top: 2px
+                left: -21px
+            &:hover
+                text-decoration: underline  
+
+
+        .name
+            font-size: 18rem
+            color: #333333
+            margin-top: 15px
+        .consultant
+            font-size: 13rem
+            color: #999999
+            font-family: "PT Sans"
+            margin: 20rem 0 40rem               
+            +media(768) 
+                margin: 10rem 0 30rem               
+            +media(1280) 
+                margin: 10rem 0 15rem               
+.footer
+    background-image: url(../img/bg-bottom.jpg)
+    background-size: cover
+    height: 400px 
+.bg
+    background-color: #1a1a1a
+.copyright
+    padding: 15px 0
+    font-size: 13rem
+    color: #ffffff
+    text-align: center    
